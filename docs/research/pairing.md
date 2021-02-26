@@ -6,8 +6,8 @@ Cecotect provides a bunch of mobile applications. There is like an application p
 
 I am using the Conga 5000 app.
 
-- Android: https://play.google.com/store/apps/details?id=es.cecotec.s5090&hl=es_419&gl=US
-- iOS: https://apps.apple.com/es/app/conga-5000/id1469506857
+- Android: [https://play.google.com/store/apps/details?id=es.cecotec.s5090&hl=es_419&gl=US](https://play.google.com/store/apps/details?id=es.cecotec.s5090&hl=es_419&gl=US)
+- iOS: [https://apps.apple.com/es/app/conga-5000/id1469506857](https://apps.apple.com/es/app/conga-5000/id1469506857)
 
 The application asks for a lot of permissions, but that is not the point at the moment. Thus, the process requires you to connect the mobile to a Wireless net with Internet access. Hence, the pairing wizard asks you to give a Conga's name. Next, the application brings up the network SSID name so you can pick it up. Next, you can define the password. Finally, the applications do some connections and end pairing the Conga. That pairing allows the Conga to connect to the Wireless network with Internet access.
 

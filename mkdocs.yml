@@ -2,8 +2,13 @@ site_name: LibreConga
 site_url:
 repo_url: https://github.com/Xumeiquer/LibreConga
 copyright: Copyright © 2021 Xumeiquer
+
 theme:
   name: material
+  favicon: images/favicon/favicon.png
+  font:
+    code: Roboto Mono
+
 nav:
   - Home: index.md
   - "Research":
@@ -11,3 +16,13 @@ nav:
       - "Pairing the app": "research/pairing.md"
       - "SSL Pinning": "research/ssl-pinning.md"
       - "Protocol": "research/protocol.md"
+
+markdown_extensions:
+  - meta
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: "#"
+
+plugins:
+  - search
