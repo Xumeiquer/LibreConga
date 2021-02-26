@@ -1,0 +1,13 @@
+site_name: LibreConga
+site_url:
+repo_url: https://github.com/Xumeiquer/LibreConga
+copyright: Copyright © 2021 Xumeiquer
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - "Research":
+      - "Recon the Conga": "research/recon.md"
+      - "Pairing the app": "research/pairing.md"
+      - "SSL Pinning": "research/ssl-pinning.md"
+      - "Protocol": "research/protocol.md"
