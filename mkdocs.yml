@@ -6,6 +6,7 @@ copyright: Copyright © 2021 Xumeiquer
 theme:
   name: material
   favicon: images/favicon/favicon.png
+  logo: images/favicon/favicon.png
   font:
     code: Roboto Mono
 
