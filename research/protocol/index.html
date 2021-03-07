@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../images/favicon/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.4">
+    
+    
+      
+        <title>Protocol - LibreConga</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#protocol" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LibreConga" class="md-header__button md-logo" aria-label="LibreConga">
+      
+  <img src="../../images/favicon/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LibreConga
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protocol
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Xumeiquer/LibreConga/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LibreConga" class="md-nav__button md-logo" aria-label="LibreConga">
+      
+  <img src="../../images/favicon/favicon.png" alt="logo">
+
+    </a>
+    LibreConga
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Xumeiquer/LibreConga/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Research
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Research" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Research
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recon/" class="md-nav__link">
+        Recon the Conga
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pairing/" class="md-nav__link">
+        Pairing the app
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-pinning/" class="md-nav__link">
+        SSL Pinning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Protocol
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#login-request" class="md-nav__link">
+    Login request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-response" class="md-nav__link">
+    Login response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocol-buffers" class="md-nav__link">
+    Protocol Buffers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reversing-protocol-buffers" class="md-nav__link">
+    Reversing Protocol Buffers
+  </a>
+  
+    <nav class="md-nav" aria-label="Reversing Protocol Buffers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-request_1" class="md-nav__link">
+    Login request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-responses" class="md-nav__link">
+    Login responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsequent-requestresponses" class="md-nav__link">
+    Subsequent request/responses
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      <label class="md-nav__link" for="__nav_2_6">
+        Models
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Models" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Models
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/ping/" class="md-nav__link">
+        Ping
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/login/" class="md-nav__link">
+        Login
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#login-request" class="md-nav__link">
+    Login request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-response" class="md-nav__link">
+    Login response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocol-buffers" class="md-nav__link">
+    Protocol Buffers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reversing-protocol-buffers" class="md-nav__link">
+    Reversing Protocol Buffers
+  </a>
+  
+    <nav class="md-nav" aria-label="Reversing Protocol Buffers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-request_1" class="md-nav__link">
+    Login request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-responses" class="md-nav__link">
+    Login responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsequent-requestresponses" class="md-nav__link">
+    Subsequent request/responses
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Xumeiquer/LibreConga/edit/master/docs/research/protocol.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="protocol">Protocol<a class="headerlink" href="#protocol" title="Permanent link">#</a></h1>
+<p>First of all, I'd like to mention something about SSL Pinning.</p>
+<p>After capturing the login process I felt like the traffic was not ciphered so I tried to login into the Conga app on another device, obviously, without installing any CA or rooting it. The traffic was the same, well it follows the same pattern. At the end of the day, all the stuff I set up for bypassing the SSL Pinning was useless, well I learned a lot, but nothing worth it for this case.</p>
+<p>That said, let's continue with the login protocol.</p>
+<p>Once the application is open, it starts sending <code>ping</code> messages to the server. Those messages are as following:</p>
+<pre><code>18 00 00 00 | 02 00 00 00 | 00 00 00 00 | 00 00 84 f2 | 38 34 41 30 | 6e 5d d5 07
+</code></pre>
+<p>I did a small research on the Internet and I found the <a href="https://github.com/adrigzr/badconga">BadConga project</a> where the owner did some reversing on those pings. They are following a pattern described <a href="https://github.com/adrigzr/badconga/blob/master/parse.py#L42">here</a>.</p>
+<pre><code>Length:    18 00 00 00
+ctype:     02 00
+flow:      00 00
+user id:   00 00 00 00
+device id: 00 00 84 f2
+Sequence:  38 34 41 30 6e 5d
+OpCode:    d5 07
+</code></pre>
+<p>It seems that <code>18 00 00 00</code> is the size of the data send back and forth. If I convert that into a decimal value it decodes as <code>24 00 00 00</code>. 24 is the number of bytes there are in the frame. But, this value is not <code>24</code> in decimal, that value is <code>24000000</code> so it must be encoded as <a href="https://en.wikipedia.org/wiki/Endianness">little-endian</a>. Decoding <code>18 00 00 00</code> as little-endian it makes more sense now.</p>
+<h2 id="login-request">Login request<a class="headerlink" href="#login-request" title="Permanent link">#</a></h2>
+<p>When I entered the credentials and hit login, the application sent soma data to the server. That data was as follows.</p>
+<pre><code>41 00 00 00 | 02 00 00 00 | 00 00 00 00 | 00 00 ee d7 | 49 34 41 30 | 6e 5d b9 0b | 0a 13 XX XX | XX XX XX XX | XX XX XX XX | XX XX XX XX | XX XX XX XX | XX 12 0f 3f | YY YY YY YY | YY YY YY YY | YY YY YY YY | YY 20 eb 07
+</code></pre>
+<p>I can see some pattern here, <code>41h</code> is <code>65d</code>, which is the exact amount of data that is in the packet. If I try to decode it as before...</p>
+<pre><code>Legnth:    41 00 00 00
+ctype:     02 00
+flow:      00 00
+user id:   00 00 00 00
+device id: 00 00 ee d7
+Sequence:  49 34 41 30 6e 5d
+OpCode:    b9 0b
+Payload:   0a 13 XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX 12 0f 3f YY YY YY YY YY YY YY YY YY YY YY YY YY 20 eb 07
+</code></pre>
+<p>Where the bytes marked as XX are part of my account and bytes marked as YY belong to my password.</p>
+<p>I'd like to make some notes here. This is not a normal protocol as it could be Form POST or JSON, it seems to be a serialized protocol, but I don't know yet which one. It is weird to build up a new protocol, but there are crazy people around there.</p>
+<p>Another thing I noticed. The field <em>device id</em> changes on every ping request, and it could be even normal as no one has login yet. But, once logged in why is the application sending a completely different <em>device id</em>? Well, let's see whether it changes once the Conga gets paired.</p>
+<h2 id="login-response">Login response<a class="headerlink" href="#login-response" title="Permanent link">#</a></h2>
+<p>Following my logic, the server response should follow the same protocol so let's dig into the reply from the server.</p>
+<p>Once more, I am going to split up the frame into chunks. Some of them have a meaning already, others are new.</p>
+<pre><code>4d 00 00 00 | 07 01 47 00 | 00 00 00 00 | 00 00 ee d7 | 49 34 41 30 | 6e 5d ba 0b | 08 00 1a 31 | 08 c3 be 28 | 12 20 SS SS | SS SS SS SS | SS SS SS SS | SS SS SS SS | SS SS SS SS | SS SS SS SS | SS SS SS SS | SS SS SS SS | SS SS 18 01 | 28 00 32 05 | 08 eb 07 10 | 03
+</code></pre>
+<p>Arranging it a little bit.</p>
+<pre><code>Length:    4d 00 00 00
+ctype:     07 01
+flow:      47 00
+user id:   00 00 00 00
+device id: 00 00 ee d7
+Sequence:  49 34 41 30 6e 5d
+OpCode:    ba 0b
+Payload:   08 00 1a 31 08 c3 be 28 12 20 SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS 18 01 28 00 32 05 08 eb 07 10 03
+</code></pre>
+<p>The bytes marked as SS belongs to something that seems to be a session token or similar. It is constructed from hexadecimal characters. All other characters seem to be some kind of context of wrapping data. But I don't have enough information to say something about them.</p>
+<p>Note: The <em>Sequance</em> is constant during the session, which means when the application is opened until it is closed. As I said, the <em>device id</em> changes on every request. And, the <em>op code</em> is an operation code. This is what I've got so far.</p>
+<table>
+<thead>
+<tr>
+<th>Op Code</th>
+<th>Decimal</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xd5 0x07</td>
+<td>2005</td>
+<td>Client ping</td>
+</tr>
+<tr>
+<td>0xd6 0x07</td>
+<td>2006</td>
+<td>Server ping response</td>
+</tr>
+<tr>
+<td>0xb9 0x0b</td>
+<td>3001</td>
+<td>Login</td>
+</tr>
+<tr>
+<td>0xba 0x0b</td>
+<td>3002</td>
+<td>Login successfull</td>
+</tr>
+</tbody>
+</table>
+<h2 id="protocol-buffers">Protocol Buffers<a class="headerlink" href="#protocol-buffers" title="Permanent link">#</a></h2>
+<p>After some digging, I found the protocol used in the payload or data section is
+<a href="https://developers.google.com/protocol-buffers/docs/overview">Protocol Buffers</a>. This is a binary protocol designed by <a href="https://google.com">Google</a>.</p>
+<p>In terms to use this protocol, you must define how your message looks like and then compile that definition. Thus, you can use it in your applications.</p>
+<p>An example from the documentation's side.</p>
+<pre><code class="language-protobuf">message Test1 {
+  optional int32 a = 1;
+}
+</code></pre>
+<p>You create a <code>Test1</code> object and assign 150 to the <code>a</code> field. You then serialize the message to an output stream. If you were able to examine the encoded you'll see three bytes.</p>
+<pre><code>08 96 01
+</code></pre>
+<p><a href="https://developers.google.com/protocol-buffers/docs/encoding">Here</a> is the full documentation regarding Protocol Buffers.</p>
+<h2 id="reversing-protocol-buffers">Reversing Protocol Buffers<a class="headerlink" href="#reversing-protocol-buffers" title="Permanent link">#</a></h2>
+<p>Protocols Buffers are sent over the network as a binary stream of data so I need something to read that data and convert it into a readable object, something similar to JSON. There is a tool written in Python called <a href="https://github.com/nccgroup/blackboxprotobuf">blackboxprotobuf</a> that can help me on this matter.</p>
+<p>Blackboxprotobuf is really easy to use. It exposes a method that requires a binary string as an argument as input. The method returns back a Python set, which can be treated as JSON object.</p>
+<p>Protocol buffers are reversed as <code>key: value</code>. But the key is not auto-explanatory, instead, the <code>key</code> is a number that is used when the data is defined just before it gets compiled. However, I can use whatever key I want in my data model definition as long as I assign the same <strong>field number</strong>.</p>
+<h3 id="login-request_1">Login request<a class="headerlink" href="#login-request_1" title="Permanent link">#</a></h3>
+<p>The login data was encoded in Protocol Buffers so using Blackboxprotobuf I can recover what the message was sent off to the server.</p>
+<p>Just to catch up, the login data was defined like:</p>
+<pre><code>0a 13 XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX 12 0f 3f YY YY YY YY YY YY YY YY YY YY YY YY YY 20 eb 07
+</code></pre>
+<p>The <code>XX</code> bytes are for the username and the <code>YY</code> bytes are the ones for the password. But there is more information not visible in plain text.</p>
+<p>After running the Blackboxprotocol I could see another field.</p>
+<pre><code class="language-json">{
+    '1': b'email@addres.com',
+    '2': b'&lt;password&gt;',
+    '4': 1003
+}
+</code></pre>
+<p>From here I know that the Protocol buffers model for the login request should be something similar to this:</p>
+<pre><code class="language-protobuf">message LoginRequest {
+  required string email = 1;
+  required string password = 2;
+  required int32 unknown = 4;
+}
+</code></pre>
+<h3 id="login-responses">Login responses<a class="headerlink" href="#login-responses" title="Permanent link">#</a></h3>
+<p>Following the same approach, I decoded the data received as a response from the login request, and as well as the login request I was able to see more fields.</p>
+<p>The data returned from the server.</p>
+<pre><code>08 00 1a 31 08 c3 be 28 12 20 SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS SS 18 01 28 00 32 05 08 eb 07 10 03
+</code></pre>
+<p><code>SS</code> bytes are the ones for the session token I could identify as they were in plain text.</p>
+<p>This is what Blackboxprotobuf could identify.</p>
+<pre><code class="language-json">{
+    '1': 0,
+    '3': {
+        '1': UUUUUU,
+        '2': b'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
+        '3': 1,
+        '5': 0,
+        '6': {
+            '1': 1003,
+            '2': 3
+        }
+    }
+}
+</code></pre>
+<p>Clearly, the data was hiding more info than expected. I classified <code>UU</code> as the <code>user ID</code>, but I don't know yet.</p>
+<!-- prettier-ignore-start -->
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following requests and responses had the value <code>UserID</code> in the header populated with the value <strong>UUUUUU</strong>. Thus, field  <code>3.1</code> is the user identification.</p>
+</div>
+<!-- prettier-ignore-end -->
+
+<p>Now what I can see is that the login response data model is something like.</p>
+<pre><code class="language-protobuf">message LoginResponse {
+    message Unknown {
+        required int32 unknown1 = 1;
+        required int32 unknown2 = 2;
+    }
+
+    message Msg {
+        required int32 user_id = 1;
+        required string session = 2;
+        required int32 unknown = 3;
+        required int32 unknown1 = 5;
+        required Unknown unknown2 = 6;
+    }
+
+    required int32 unknown = 1;
+    required Msg msg = 3;
+}
+</code></pre>
+<h2 id="subsequent-requestresponses">Subsequent request/responses<a class="headerlink" href="#subsequent-requestresponses" title="Permanent link">#</a></h2>
+<p>Now, I know how to decode the Protocol Buffers so reading the data and parsing as Protocol Buffers is not an issue anymore. The problem is to identify all the field meaning. This is usually a try and failure and sees what changes on each request by doing <em>A</em> or <em>B</em>.</p>
+<p>Just after the login success response from the server, the application did another call to the server with the following data.</p>
+<pre><code class="language-json">{
+    '1': b'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
+    '2': 1,
+    '3': 1003,
+    '4': 1003,
+    '5': b'1.1.21'
+}
+</code></pre>
+<p>Fron this request I got that the application was using the session returned by the server on the login success. The application also sends some other values that I don't understand, but there is one <code>'5': b'1.1.21'</code> which is the application version. On the other hand, the interesting thing here is the command <code>opcode</code> used to send that amount of data. The opcode is <strong>0x7d1</strong>. This code seems to be a client identification or something similar.</p>
+<p>I didn't receive any response, instead, the app did another request.</p>
+<pre><code class="language-json">{
+    '1': UUUUUU,
+    '2': b'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
+    '3': 23
+}
+</code></pre>
+<p>This time the <code>opcode</code> was <strong>0xbcb</strong> and it seems to be a kind of ping or keepalive.</p>
+<p>Another <code>opcode</code> sent to the server was <code>0xbe5</code>. As per the information sent it seems to be just a remainder for the application version.</p>
+<pre><code class="language-json">{
+    '1': 1,
+    '2': 1003,
+    '3': b'1.1.21'
+}
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../ssl-pinning/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              SSL Pinning
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../commands/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Commands
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2021 Xumeiquer
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9b151c6a.min.js"></script>
+      
+    
+  </body>
+</html>
