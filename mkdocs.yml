@@ -17,6 +17,10 @@ nav:
       - "Pairing the app": "research/pairing.md"
       - "SSL Pinning": "research/ssl-pinning.md"
       - "Protocol": "research/protocol.md"
+      - "Commands": "research/commands.md"
+      - "Models":
+          - "Ping": "research/models/ping.md"
+          - "Login": "research/models/login.md"
 
 markdown_extensions:
   - meta
